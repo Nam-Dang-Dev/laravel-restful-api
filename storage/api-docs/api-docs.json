@@ -5,8 +5,86 @@
         "version": "0.1"
     },
     "paths": {
+        "/api/v2/register": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "description": "User unique email address",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "description": "User unique email address",
+                            "type": "string",
+                            "format": "email"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "password"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Register success"
+                    }
+                }
+            }
+        },
+        "/api/v2/login": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "description": "User unique email address",
+                            "type": "string",
+                            "format": "email"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "password"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Login success"
+                    }
+                }
+            }
+        },
         "/api/v2/customers": {
             "get": {
+                "tags": [
+                    "Customer"
+                ],
                 "responses": {
                     "200": {
                         "description": "get all customers"
@@ -21,6 +99,9 @@
         },
         "/api/v2/customer": {
             "post": {
+                "tags": [
+                    "Customer"
+                ],
                 "parameters": [
                     {
                         "name": "first_name",

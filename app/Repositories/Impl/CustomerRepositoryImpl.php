@@ -8,12 +8,12 @@ use App\Repositories\Eloquent\EloquentRepository;
 
 class CustomerRepositoryImpl extends EloquentRepository implements CustomerRepository
 {
-    // protected $model;
+    protected $model;
 
-    // public function __construct()
-    // {
-    //     $this->model = $this->getModel();
-    // }
+    public function __construct()
+    {
+        $this->model = app()->make($this->getModel());
+    }
 
 
     public function getModel()
@@ -23,6 +23,6 @@ class CustomerRepositoryImpl extends EloquentRepository implements CustomerRepos
     }
 
     public function getDataByMonth($month){
-        return $month;
+        return $this->model->where('last_name','=', 'Dang')->get();
     }
 }

@@ -10,6 +10,75 @@ use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
+    /**
+     * @OA\Post(
+     *     path="/api/v2/register",
+     *     @OA\Response(response="200",
+     *     description="Register success"),
+     *     tags={"Auth"},
+     * 
+     * @OA\Parameter(
+     *      name="name",
+     *      in="query",
+     *      required=true,
+     *      @OA\Schema(
+     *           type="string",
+     *           description="User unique email address"
+     *      )
+     *   ),
+     * @OA\Parameter(
+     *      name="email",
+     *      in="query",
+     *      required=true,
+     *      @OA\Schema(
+     *           type="string",
+     *           format="email",
+     *           description="User unique email address"
+     *      )
+     *   ),
+     * @OA\Parameter(
+     *      name="password",
+     *      in="query",
+     *      required=true,
+     *      @OA\Schema(
+     *           type="string",
+     *           format="password"
+     *      )
+     *   ),
+     * )
+     */
+
+     /**
+     * @OA\Post(
+     *     path="/api/v2/login",
+     *     @OA\Response(response="200",
+     *     description="Login success"),
+     *     tags={"Auth"},
+     * 
+     * @OA\Parameter(
+     *      name="email",
+     *      in="query",
+     *      required=true,
+     *      @OA\Schema(
+     *           type="string",
+     *           format="email",
+     *           description="User unique email address"
+     *      )
+     *   ),
+     * @OA\Parameter(
+     *      name="password",
+     *      in="query",
+     *      required=true,
+     *      @OA\Schema(
+     *           type="string",
+     *           format="password"
+     *      )
+     *   ),
+     * )
+     */
+
+
+
     protected $authService;
 
     public function __construct(AuthService $authService)
@@ -35,13 +104,7 @@ class AuthController extends Controller
     }
 
     public function login(Request $request) {
-        $user = auth()->attempt($request->only(['email', 'password']));
-        if(!$user) {
-            return response()->json('Invalid Credentials', 401);
-        }
-        $accessToken = auth()->user()->createToken('authToken')->accessToken;
-        return response()->json(['user' => auth()->user(), 'access_token' => $accessToken], 200);
-
-
+        $data = $this->authService->login($request->only(['email', 'password']));
+        return response()->json($data['user'], $data['statusCode']);
     }
 }

@@ -8,16 +8,26 @@ use App\Repositories\Eloquent\EloquentRepository;
 
 class AuthRepositoryImpl extends EloquentRepository implements AuthRepository
 {
-    // protected $model;
+    protected $model;
 
-    // public function __construct()
-    // {
-    //     $this->model = $this->getModel();
-    // }
+    public function __construct()
+    {
+        $this->model = app()->make($this->getModel());
+    }
 
     public function getModel()
     {
         $model = User::class;
         return $model;
+    }
+
+    public function login($user)
+    {
+        $user = auth()->attempt($user);
+        if(!$user) {
+            return ['message' => 'Invalid Credentials'];
+        }
+        $accessToken = auth()->user()->createToken('authToken')->accessToken;
+        return (['user' => auth()->user(), 'access_token' => $accessToken]);
     }
 }

@@ -14,6 +14,7 @@ class CustomerController extends Controller
      *     path="/api/v2/customers",
      *     @OA\Response(response="200",
      *     description="get all customers"),
+     *     tags={"Customer"},
      *     security={{"bearerAuth":{}}},
      * )
      */
@@ -22,6 +23,7 @@ class CustomerController extends Controller
      *     path="/api/v2/customer",
      *     @OA\Response(response="200",
      *     description="add new a customer"),
+     *     tags={"Customer"},
      *     security={{"bearerAuth":{}}},
      * 
      * @OA\Parameter(
@@ -58,7 +60,6 @@ class CustomerController extends Controller
 
     public function index()
     {
-        dd(Auth::user()->token());
         $customers = $this->customerService->getAll();
         return response()->json($customers, 200);
     }

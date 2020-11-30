@@ -31,4 +31,20 @@ class AuthServiceImpl implements AuthService
 
         return $data;
     }
+
+    public function login($user)
+    {
+        $user = $this->authRepository->login($user);
+
+        $statusCode = 201;
+        if($user == 'Invalid Credentials') {
+            $statusCode = 401;
+        }
+        $data = [
+            'statusCode' => $statusCode,
+            'user' => $user
+        ];
+
+        return $data;
+    }
 }

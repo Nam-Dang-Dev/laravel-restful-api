@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
+use App\User;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
@@ -24,9 +25,9 @@ class Authenticate extends Middleware
     // }
     protected function redirectTo($request)
     {
-        var_dump(Auth::guard('api'));
-        if (! $request->expectsJson()) {
-            return route('login');
+        if (!$request->expectsJson()) {
+            Log::info("Login Fail:Expired token  | Status:401");
+            abort(401, 'Expired token');
         }
     }
 }

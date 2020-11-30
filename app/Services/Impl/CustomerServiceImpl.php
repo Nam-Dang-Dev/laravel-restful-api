@@ -56,6 +56,7 @@ class CustomerServiceImpl implements CustomerService
 
     public function getDataByMonth($month)
     {
-        return $month;
+        $user = $this->customerRepository->getDataByMonth($month);
+        return $user;
     }
 }
