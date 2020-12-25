@@ -22,7 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group([
     'namespace' => 'Api',
     'prefix' => 'v2',
-    'middleware' => ['auth:api']
+    // 'middleware' => ['auth:api']
 ], function() {
     Route::get('/customers', 'CustomerController@index');
     Route::post('/customer', 'CustomerController@store');
