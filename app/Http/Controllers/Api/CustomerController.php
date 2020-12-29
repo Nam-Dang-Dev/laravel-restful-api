@@ -99,7 +99,12 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $customer = [
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name
+        ];
+        $data = $this->customerService->update($id, $customer);
+        return response()->json($data['customer'], $data['statusCode']);
     }
 
     /**
@@ -108,9 +113,10 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $data = $this->customerService->delete($id);
+        return response()->json($data['customer'], $data['statusCode']);
     }
 
     public function getDataByMonth($month)

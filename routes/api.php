@@ -26,6 +26,8 @@ Route::group([
 ], function() {
     Route::get('/customers', 'CustomerController@index');
     Route::post('/customer', 'CustomerController@store');
+    Route::put('/customer/{id}', 'CustomerController@update');
+    Route::delete('/customer/{id}', 'CustomerController@delete');
     Route::get('/customer/{id}', 'CustomerController@show');
     Route::get('/customer-by-month/{month}', 'CustomerController@getDataByMonth');
 });

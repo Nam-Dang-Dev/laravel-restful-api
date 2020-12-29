@@ -59,4 +59,38 @@ class CustomerServiceImpl implements CustomerService
         $user = $this->customerRepository->getDataByMonth($month);
         return $user;
     }
+
+    public function update($id, $data)
+    {
+        $customer = $this->customerRepository->update($id, $data);
+
+        $statusCode = 201;
+        if(!$customer) {
+            $statusCode = 500;
+        }
+
+        $data = [
+            'statusCode' => $statusCode,
+            'customer' => $customer
+        ];
+
+        return $data;
+    }
+
+    public function delete($id)
+    {
+        $customer = $this->customerRepository->delete($id);
+        
+        $statusCode = 201;
+        if(!$customer) {
+            $statusCode = 500;
+        }
+
+        $data = [
+            'statusCode' => $statusCode,
+            'customer' => $customer
+        ];
+
+        return $data;
+    }
 }

@@ -3,6 +3,12 @@
       <CCol md="12">
         <CCardHeader>
           Customer Management
+          <br/>
+          <CCol class="d-none d-md-block">
+            <CButton color="primary" class="float-right"  @click="openModal()">
+                Create
+            </CButton>
+          </CCol>
           <CCardBody>
             <br/>
             <CDataTable
@@ -23,8 +29,8 @@
                 </div>
               </td>
               <td slot="activity" slot-scope="{item}">
-                <b-button variant="danger">Delete</b-button>
-                <CButton color="dark" @click="updateModal(item)" class="mr-1">
+                <b-button variant="danger" @click="deleteModal(item.id)">Delete</b-button>
+                <CButton color="dark" @click="openModal(item)" class="mr-1">
                   Update
                 </CButton>
               </td>
@@ -46,7 +52,7 @@
               <CInput
                 label="First Name"
                 placeholder="Enter your First Name"
-                v-model = "dataUpdate.first_name"
+                v-model = "properties.first_name"
               />
             </CCol>
           </CRow>
@@ -55,18 +61,20 @@
               <CInput
                 label="Last Name"
                 placeholder="Enter your Last Name"
-                 v-model = "dataUpdate.last_name"
+                v-model = "properties.last_name"
               />
             </CCol>
           </CRow>
         </CCardBody>
         <template #header>
-          <h6 class="modal-title">Updare Customer</h6>
+          <h6 class="modal-title">Update Customer</h6>
           <CButtonClose @click="isModal = false" class="text-white"/>
         </template>
         <template #footer>
           <CButton @click="isModal = false" color="danger">Cancel</CButton>
-          <CButton @click="updateCustomer(dataUpdate)" color="success">Update</CButton>
+          
+          <CButton v-if="type === 'update'" @click="updateCustomer(properties)" color="success">Submit</CButton>
+          <CButton v-else @click="createCustomer(properties)" color="success">Create</CButton>
         </template>
       </CModal>
     </CRow>
@@ -86,7 +94,11 @@ import { BButton, BModal } from 'bootstrap-vue'
           { key: 'activity' },
         ],
         isModal: false,
-        dataUpdate: {}
+        properties: {
+          first_name: '',
+          last_name: ''
+        },
+        type: 'create'
       }
     },
     components: {
@@ -120,12 +132,25 @@ import { BButton, BModal } from 'bootstrap-vue'
         }
         return $color
       },
-      updateModal(customer){
+      openModal(customer){
         this.isModal = !this.isModal
-        this.dataUpdate = customer
+        if(customer){
+          this.properties = customer
+          this.type = 'update'
+        }else{
+          this.type = 'create'
+        }
       },
       updateCustomer(customer){
-        console.log("customerdddd", customer);
+        this.$store.dispatch("customer/updateCustomer", customer)
+        this.isModal = !this.isModal
+      },
+      deleteModal(id){
+        this.$store.dispatch("customer/deleteCustomer", id)
+      },
+      createCustomer(customer){
+        this.$store.dispatch("customer/createCustomer", customer)
+        this.isModal = !this.isModal
       }
     }
   };

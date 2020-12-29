@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+import store from '../store'
 // Containers
 const TheContainer = () => import('../containers/TheContainer.vue')
 
@@ -59,12 +59,7 @@ const User = () => import('../components/users/User')
 
 Vue.use(Router)
 
-export default new Router({
-  mode: 'hash', // https://router.vuejs.org/api/#mode
-  linkActiveClass: 'active',
-  scrollBehavior: () => ({ y: 0 }),
-  routes: configRoutes()
-})
+
 
 function configRoutes () {
   return [
@@ -73,6 +68,13 @@ function configRoutes () {
       redirect: '/dashboard',
       name: 'Home',
       component: TheContainer,
+      beforeEnter: (to, from, next) => {
+        if (store.state.auth) {
+          next()
+          return
+        }
+        next('/login')
+      },
       children: [
         {
           path: 'dashboard',
@@ -308,35 +310,46 @@ function configRoutes () {
       ]
     },
     {
-      path: '/pages',
-      redirect: '/pages/404',
-      name: 'Pages',
-      component: {
-        render (c) { return c('router-view') }
-      },
-      children: [
-        {
-          path: '404',
-          name: 'Page404',
-          component: Page404
-        },
-        {
-          path: '500',
-          name: 'Page500',
-          component: Page500
-        },
-        {
-          path: 'login',
-          name: 'Login',
-          component: Login
-        },
-        {
-          path: 'register',
-          name: 'Register',
-          component: Register
-        }
-      ]
+      path: '/404',
+      name: 'Page404',
+      component: Page404
+    },
+    {
+      path: '/500',
+      name: 'Page500',
+      component: Page500
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
   ]
 }
 
+const router =  new Router({
+  mode: 'hash', // https://router.vuejs.org/api/#mode
+  linkActiveClass: 'active',
+  scrollBehavior: () => ({ y: 0 }),
+  routes: configRoutes()
+})
+
+router.beforeEach((to, from, next) => {
+  // if (!store.state.auth) {
+  //   router.push({ 
+  //     name: 'login',
+  //     params: {
+  //       returnTo: to.path,
+  //       query: to.query,
+  //     },
+  //   });
+  // }
+  next()
+})
+
+export default router

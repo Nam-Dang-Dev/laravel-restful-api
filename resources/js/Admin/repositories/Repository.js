@@ -2,7 +2,6 @@ import axios from 'axios'
 import store from '../store'
 
 const baseURL = 'http://localhost:2000/api/v2/'
-console.log("url", baseURL)
 const axiosRequest = axios.create({
   baseURL
 })

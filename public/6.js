@@ -448,6 +448,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -463,7 +471,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         key: 'activity'
       }],
       isModal: false,
-      dataUpdate: {}
+      properties: {
+        first_name: '',
+        last_name: ''
+      },
+      type: 'create'
     };
   },
   components: {
@@ -518,12 +530,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
       return $color;
     },
-    updateModal: function updateModal(customer) {
+    openModal: function openModal(customer) {
       this.isModal = !this.isModal;
-      this.dataUpdate = customer;
+
+      if (customer) {
+        this.properties = customer;
+        this.type = 'update';
+      } else {
+        this.type = 'create';
+      }
     },
     updateCustomer: function updateCustomer(customer) {
-      console.log("customerdddd", customer);
+      this.$store.dispatch("customer/updateCustomer", customer);
+      this.isModal = !this.isModal;
+    },
+    deleteModal: function deleteModal(id) {
+      this.$store.dispatch("customer/deleteCustomer", id);
+    },
+    createCustomer: function createCustomer(customer) {
+      this.$store.dispatch("customer/createCustomer", customer);
+      this.isModal = !this.isModal;
     }
   }
 });
@@ -734,6 +760,29 @@ var render = function() {
             "CCardHeader",
             [
               _vm._v("\n      Customer Management\n      "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "CCol",
+                { staticClass: "d-none d-md-block" },
+                [
+                  _c(
+                    "CButton",
+                    {
+                      staticClass: "float-right",
+                      attrs: { color: "primary" },
+                      on: {
+                        click: function($event) {
+                          return _vm.openModal()
+                        }
+                      }
+                    },
+                    [_vm._v("\n            Create\n        ")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
               _c(
                 "CCardBody",
                 [
@@ -787,7 +836,14 @@ var render = function() {
                                   [
                                     _c(
                                       "b-button",
-                                      { attrs: { variant: "danger" } },
+                                      {
+                                        attrs: { variant: "danger" },
+                                        on: {
+                                          click: function($event) {
+                                            return _vm.deleteModal(item.id)
+                                          }
+                                        }
+                                      },
                                       [_vm._v("Delete")]
                                     ),
                                     _vm._v(" "),
@@ -798,7 +854,7 @@ var render = function() {
                                         attrs: { color: "dark" },
                                         on: {
                                           click: function($event) {
-                                            return _vm.updateModal(item)
+                                            return _vm.openModal(item)
                                           }
                                         }
                                       },
@@ -816,7 +872,7 @@ var render = function() {
                           ],
                           null,
                           false,
-                          51091547
+                          3559061817
                         )
                       })
                     : _vm._e()
@@ -852,7 +908,7 @@ var render = function() {
               fn: function() {
                 return [
                   _c("h6", { staticClass: "modal-title" }, [
-                    _vm._v("Updare Customer")
+                    _vm._v("Update Customer")
                   ]),
                   _vm._v(" "),
                   _c("CButtonClose", {
@@ -884,18 +940,31 @@ var render = function() {
                     [_vm._v("Cancel")]
                   ),
                   _vm._v(" "),
-                  _c(
-                    "CButton",
-                    {
-                      attrs: { color: "success" },
-                      on: {
-                        click: function($event) {
-                          return _vm.updateCustomer(_vm.dataUpdate)
-                        }
-                      }
-                    },
-                    [_vm._v("Update")]
-                  )
+                  _vm.type === "update"
+                    ? _c(
+                        "CButton",
+                        {
+                          attrs: { color: "success" },
+                          on: {
+                            click: function($event) {
+                              return _vm.updateCustomer(_vm.properties)
+                            }
+                          }
+                        },
+                        [_vm._v("Submit")]
+                      )
+                    : _c(
+                        "CButton",
+                        {
+                          attrs: { color: "success" },
+                          on: {
+                            click: function($event) {
+                              return _vm.createCustomer(_vm.properties)
+                            }
+                          }
+                        },
+                        [_vm._v("Create")]
+                      )
                 ]
               },
               proxy: true
@@ -919,11 +988,11 @@ var render = function() {
                           placeholder: "Enter your First Name"
                         },
                         model: {
-                          value: _vm.dataUpdate.first_name,
+                          value: _vm.properties.first_name,
                           callback: function($$v) {
-                            _vm.$set(_vm.dataUpdate, "first_name", $$v)
+                            _vm.$set(_vm.properties, "first_name", $$v)
                           },
-                          expression: "dataUpdate.first_name"
+                          expression: "properties.first_name"
                         }
                       })
                     ],
@@ -946,11 +1015,11 @@ var render = function() {
                           placeholder: "Enter your Last Name"
                         },
                         model: {
-                          value: _vm.dataUpdate.last_name,
+                          value: _vm.properties.last_name,
                           callback: function($$v) {
-                            _vm.$set(_vm.dataUpdate, "last_name", $$v)
+                            _vm.$set(_vm.properties, "last_name", $$v)
                           },
-                          expression: "dataUpdate.last_name"
+                          expression: "properties.last_name"
                         }
                       })
                     ],

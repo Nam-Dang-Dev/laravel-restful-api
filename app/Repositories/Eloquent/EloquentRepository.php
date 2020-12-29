@@ -46,4 +46,26 @@ abstract class EloquentRepository implements Repository
         }
         return $result;
     }
+
+    public function update($id, $data)
+    {
+        try {
+            $result = $this->model->find($id);
+            $result->update($data);
+            $record = $result->refresh();
+        } catch (\Throwable $e) {
+            throw $e;
+        }
+        return $record;
+    }
+
+    public function delete($id)
+    {
+        try {
+            $result = $this->model->find($id)->delete();
+        } catch (\Throwable $e) {
+            throw $e;
+        }
+        return $result;
+    }
 }
