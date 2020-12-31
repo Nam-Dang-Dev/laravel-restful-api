@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Services\AuthService;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\BaseApiController;
 
-class AuthController extends Controller
+class AuthController extends BaseApiController
 {
     /**
      * @OA\Post(
@@ -96,7 +98,9 @@ class AuthController extends Controller
 
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()) {
-            return response()->json($validator->errors(), 422);
+            $error = "Request validation error";
+            Log::error($error . " Abort.");
+            return $this->sendJsonError($error, $validator->errors(), 422);
         }
         $request['password'] = bcrypt($request['password']);
         $data = $this->authService->create($request->all());

@@ -1,23 +1,27 @@
-require('./bootstrap');
+require('./bootstrap')
+window.Vue = require('vue')
 import 'core-js/stable'
 import Vue from 'vue'
-import App from './Admin/App.vue'
-import router from './Admin/router'
+import VueRouter from 'vue-router'
+import App from './App.vue'
+import Routes from './router'
 import CoreuiVue from '@coreui/vue'
-import { iconsSet as icons } from './Admin/assets/icons/icons.js'
-import store from './Admin/store'
-
+import { iconsSet as icons } from './assets/icons/icons.js'
+import store from './store'
+import TheContainer from './containers/TheContainer.vue'
+import NoneLayout from './containers/NoneLayout.vue'
 Vue.config.performance = true
 Vue.use(CoreuiVue)
+Vue.router = Routes
+Vue.use(VueRouter)
 Vue.prototype.$log = console.log.bind(console)
+Vue.component('default-layout', TheContainer)
+Vue.component('none-layout', NoneLayout)
 
 new Vue({
   el: '#app',
-  router,
+  router: Routes,
   store,
   icons,
-  template: '<App/>',
-  components: {
-    App
-  }
+  render: h => h(App),
 })

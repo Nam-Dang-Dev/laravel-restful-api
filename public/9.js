@@ -1,267 +1,119 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[9],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/users/User.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/users/User.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'BrandButtons',
-  usage: '<CButton color="facebook"><span>Facebook</span></CButton>',
-  iconsOnlyUsage: '<CButton color="facebook"><CIcon name="cib-facebook"/></CButton>',
-  textOnlyUsage: '<CButton color="facebook"><CIcon name="cib-facebook"/></CButton>',
-  brands: ['facebook', 'twitter', 'linkedin', 'flickr', 'tumblr', 'xing', 'github', 'stackoverflow', 'youtube', 'dribbble', 'instagram', 'pinterest', 'vk', 'yahoo', 'behance', 'reddit', 'vimeo'] // labels: {
-  //   facebook: 'Facebook',
-  //   twitter: 'Twitter',
-  //   linkedin: 'LinkedIn',
-  //   flickr: 'Flickr',
-  //   tumblr: 'Tumblr',
-  //   xing: 'Xing',
-  //   github: 'Github',
-  //   stackoverflow: 'StackOverflow',
-  //   youtube: 'YouTube',
-  //   dribbble: 'Dribbble',
-  //   instagram: 'Instagram',
-  //   pinterest: 'Pinterest',
-  //   vk: 'VK',
-  //   yahoo: 'Yahoo',
-  //   behance: 'Behance',
-  //   reddit: 'Reddit',
-  //   vimeo: 'Vimeo'
-  // }
+/* harmony import */ var _UsersData__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UsersData */ "./resources/js/components/users/UsersData.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'User',
+  beforeRouteEnter: function beforeRouteEnter(to, from, next) {
+    next(function (vm) {
+      vm.usersOpened = from.fullPath.includes('users');
+    });
+  },
+  data: function data() {
+    return {
+      usersOpened: null
+    };
+  },
+  computed: {
+    fields: function fields() {
+      return [{
+        key: 'key',
+        label: this.username,
+        _style: 'width:150px'
+      }, {
+        key: 'value',
+        label: '',
+        _style: 'width:150px;'
+      }];
+    },
+    userData: function userData() {
+      var id = this.$route.params.id;
+      var user = _UsersData__WEBPACK_IMPORTED_MODULE_0__["default"].find(function (user, index) {
+        return index + 1 == id;
+      });
+      var userDetails = user ? Object.entries(user) : [['id', 'Not found']];
+      return userDetails.map(function (_ref) {
+        var _ref2 = _slicedToArray(_ref, 2),
+            key = _ref2[0],
+            value = _ref2[1];
+
+        return {
+          key: key,
+          value: value
+        };
+      });
+    },
+    visibleData: function visibleData() {
+      return this.userData.filter(function (param) {
+        return param.key !== 'username';
+      });
+    },
+    username: function username() {
+      return this.userData.filter(function (param) {
+        return param.key === 'username';
+      })[0].value;
+    }
+  },
+  methods: {
+    goBack: function goBack() {
+      this.usersOpened ? this.$router.go(-1) : this.$router.push({
+        path: '/users'
+      });
+    }
+  }
 });
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css&":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css& ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.btn[data-v-0b6a0453] {\n  margin-bottom: 4px;\n  margin-right: 6px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=template&id=0b6a0453&scoped=true&":
-/*!*****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=template&id=0b6a0453&scoped=true& ***!
-  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/users/User.vue?vue&type=template&id=67086f1d&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/users/User.vue?vue&type=template&id=67086f1d& ***!
+  \*************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -278,368 +130,46 @@ var render = function() {
     [
       _c(
         "CCol",
-        { attrs: { col: "12" } },
+        { attrs: { col: "12", lg: "6" } },
         [
           _c(
             "CCard",
             [
               _c("CCardHeader", [
-                _c("strong", [_vm._v("Brand Button")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-header-actions" }, [
+                _vm._v(
+                  "\n        User id:  " +
+                    _vm._s(_vm.$route.params.id) +
+                    "\n      "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "CCardBody",
+                [
+                  _c("CDataTable", {
+                    attrs: {
+                      striped: "",
+                      small: "",
+                      fixed: "",
+                      items: _vm.visibleData,
+                      fields: _vm.fields
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "CCardFooter",
+                [
                   _c(
-                    "a",
-                    {
-                      staticClass: "card-header-action",
-                      attrs: {
-                        href:
-                          "https://coreui.io/vue/docs/components/button-components",
-                        rel: "noreferrer noopener",
-                        target: "_blank"
-                      }
-                    },
-                    [
-                      _c("small", { staticClass: "text-muted" }, [
-                        _vm._v("docs")
-                      ])
-                    ]
+                    "CButton",
+                    { attrs: { color: "primary" }, on: { click: _vm.goBack } },
+                    [_vm._v("Back")]
                   )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("CCardBody", [
-                _c("small", [_vm._v("Usage ")]),
-                _vm._v(" "),
-                _c("code", [_vm._v(_vm._s(_vm.$options.usage))]),
-                _vm._v(" "),
-                _c("hr"),
-                _vm._v(" "),
-                _c("h6", [
-                  _vm._v("\n          Size Small\n          "),
-                  _c("small", [
-                    _vm._v("Add "),
-                    _c("code", [_vm._v('size="sm"')])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          {
-                            key: key,
-                            attrs: {
-                              name: brandName,
-                              size: "sm",
-                              color: brandName
-                            }
-                          },
-                          [
-                            _c("CIcon", {
-                              attrs: { size: "sm", name: "cib-" + brandName }
-                            }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(_vm._s(brandName))])
-                          ],
-                          1
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c("h6", [_vm._v("Size Normal")]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          {
-                            key: key,
-                            attrs: { name: brandName, color: brandName }
-                          },
-                          [
-                            _c("CIcon", {
-                              attrs: { name: "cib-" + brandName }
-                            }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(_vm._s(brandName))])
-                          ],
-                          1
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c("h6", [
-                  _vm._v("Size Large "),
-                  _c("small", [
-                    _vm._v("Add "),
-                    _c("code", [_vm._v('size="lg"')])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          {
-                            key: key,
-                            attrs: {
-                              name: brandName,
-                              size: "lg",
-                              color: brandName
-                            }
-                          },
-                          [
-                            _c("CIcon", {
-                              attrs: { size: "lg", name: "cib-" + brandName }
-                            }),
-                            _vm._v(" "),
-                            _c("span", [_vm._v(_vm._s(brandName))])
-                          ],
-                          1
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                )
-              ])
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CCol",
-        { attrs: { col: "12" } },
-        [
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [
-                _c("strong", [_vm._v("Brand Button ")]),
-                _vm._v(" "),
-                _c("small", [_vm._v("Icons only")])
-              ]),
-              _vm._v(" "),
-              _c("CCardBody", [
-                _c("small", [_vm._v("Usage ")]),
-                _vm._v(" "),
-                _c("code", [_vm._v(_vm._s(_vm.$options.iconsOnlyUsage))]),
-                _vm._v(" "),
-                _c("hr"),
-                _vm._v(" "),
-                _c("h6", [
-                  _vm._v("Size Small "),
-                  _c("small", [
-                    _vm._v("Add "),
-                    _c("code", [_vm._v('size="sm"')])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          {
-                            key: key,
-                            attrs: {
-                              name: brandName,
-                              size: "sm",
-                              color: brandName
-                            }
-                          },
-                          [
-                            _c("CIcon", {
-                              attrs: { size: "sm", name: "cib-" + brandName }
-                            })
-                          ],
-                          1
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c("h6", [_vm._v("Size Normal")]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          {
-                            key: key,
-                            attrs: { name: brandName, color: brandName }
-                          },
-                          [
-                            _c("CIcon", { attrs: { name: "cib-" + brandName } })
-                          ],
-                          1
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c("h6", [
-                  _vm._v("Size Large "),
-                  _c("small", [
-                    _vm._v("Add "),
-                    _c("code", [_vm._v('size="lg"')])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          {
-                            key: key,
-                            attrs: {
-                              name: brandName,
-                              size: "lg",
-                              color: brandName
-                            }
-                          },
-                          [
-                            _c("CIcon", {
-                              attrs: { size: "lg", name: "cib-" + brandName }
-                            })
-                          ],
-                          1
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                )
-              ])
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "CCol",
-        { attrs: { col: "12" } },
-        [
-          _c(
-            "CCard",
-            [
-              _c("CCardHeader", [
-                _c("strong", [_vm._v("Brand Button ")]),
-                _vm._v(" "),
-                _c("small", [_vm._v("Text only")])
-              ]),
-              _vm._v(" "),
-              _c("CCardBody", [
-                _c("small", [_vm._v("Usage ")]),
-                _vm._v(" "),
-                _c("code", [
-                  _vm._v(
-                    "\n          " +
-                      _vm._s(_vm.$options.textOnlyUsage) +
-                      "\n        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("hr"),
-                _vm._v(" "),
-                _c("h6", [
-                  _vm._v("Size Small "),
-                  _c("small", [
-                    _vm._v("Add "),
-                    _c("code", [_vm._v('size="sm"')])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          { key: key, attrs: { size: "sm", color: brandName } },
-                          [_c("span", [_vm._v(_vm._s(brandName))])]
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c("h6", [_vm._v("Size Normal")]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          { key: key, attrs: { color: brandName } },
-                          [_c("span", [_vm._v(_vm._s(brandName))])]
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c("h6", [
-                  _vm._v("Size Large "),
-                  _c("small", [
-                    _vm._v("Add "),
-                    _c("code", [_vm._v('size="lg"')])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  [
-                    _vm._l(_vm.$options.brands, function(brandName, key) {
-                      return [
-                        _c(
-                          "CButton",
-                          { key: key, attrs: { size: "lg", color: brandName } },
-                          [_c("span", [_vm._v(_vm._s(brandName))])]
-                        )
-                      ]
-                    })
-                  ],
-                  2
-                )
-              ])
+                ],
+                1
+              )
             ],
             1
           )
@@ -657,20 +187,18 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/Admin/components/buttons/BrandButtons.vue":
-/*!****************************************************************!*\
-  !*** ./resources/js/Admin/components/buttons/BrandButtons.vue ***!
-  \****************************************************************/
+/***/ "./resources/js/components/users/User.vue":
+/*!************************************************!*\
+  !*** ./resources/js/components/users/User.vue ***!
+  \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _BrandButtons_vue_vue_type_template_id_0b6a0453_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BrandButtons.vue?vue&type=template&id=0b6a0453&scoped=true& */ "./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=template&id=0b6a0453&scoped=true&");
-/* harmony import */ var _BrandButtons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BrandButtons.vue?vue&type=script&lang=js& */ "./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _BrandButtons_vue_vue_type_style_index_0_id_0b6a0453_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css& */ "./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
+/* harmony import */ var _User_vue_vue_type_template_id_67086f1d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./User.vue?vue&type=template&id=67086f1d& */ "./resources/js/components/users/User.vue?vue&type=template&id=67086f1d&");
+/* harmony import */ var _User_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./User.vue?vue&type=script&lang=js& */ "./resources/js/components/users/User.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -678,69 +206,195 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _BrandButtons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _BrandButtons_vue_vue_type_template_id_0b6a0453_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _BrandButtons_vue_vue_type_template_id_0b6a0453_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _User_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _User_vue_vue_type_template_id_67086f1d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _User_vue_vue_type_template_id_67086f1d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "0b6a0453",
+  null,
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/Admin/components/buttons/BrandButtons.vue"
+component.options.__file = "resources/js/components/users/User.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************!*\
-  !*** ./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************/
+/***/ "./resources/js/components/users/User.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/users/User.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BrandButtons.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./User.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/users/User.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css&":
-/*!*************************************************************************************************************************!*\
-  !*** ./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css& ***!
-  \*************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_style_index_0_id_0b6a0453_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/style-loader!../../../../../node_modules/css-loader??ref--7-1!../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=style&index=0&id=0b6a0453&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_style_index_0_id_0b6a0453_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_style_index_0_id_0b6a0453_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_style_index_0_id_0b6a0453_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_style_index_0_id_0b6a0453_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ "./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=template&id=0b6a0453&scoped=true&":
-/*!***********************************************************************************************************!*\
-  !*** ./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=template&id=0b6a0453&scoped=true& ***!
-  \***********************************************************************************************************/
+/***/ "./resources/js/components/users/User.vue?vue&type=template&id=67086f1d&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/users/User.vue?vue&type=template&id=67086f1d& ***!
+  \*******************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_template_id_0b6a0453_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./BrandButtons.vue?vue&type=template&id=0b6a0453&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Admin/components/buttons/BrandButtons.vue?vue&type=template&id=0b6a0453&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_template_id_0b6a0453_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_67086f1d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./User.vue?vue&type=template&id=67086f1d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/users/User.vue?vue&type=template&id=67086f1d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_67086f1d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BrandButtons_vue_vue_type_template_id_0b6a0453_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_67086f1d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/users/UsersData.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/users/UsersData.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var usersData = [{
+  username: 'Samppa Nori',
+  registered: '2012/01/01',
+  role: 'Member',
+  status: 'Active'
+}, {
+  username: 'Estavan Lykos',
+  registered: '2012/02/01',
+  role: 'Staff',
+  status: 'Banned'
+}, {
+  username: 'Chetan Mohamed',
+  registered: '2012/02/01',
+  role: 'Admin',
+  status: 'Inactive'
+}, {
+  username: 'Derick Maximinus',
+  registered: '2012/03/01',
+  role: 'Member',
+  status: 'Pending'
+}, {
+  username: 'Friderik Dávid',
+  registered: '2012/01/21',
+  role: 'Staff',
+  status: 'Active'
+}, {
+  username: 'Yiorgos Avraamu',
+  registered: '2012/01/01',
+  role: 'Member',
+  status: 'Active'
+}, {
+  username: 'Avram Tarasios',
+  registered: '2012/02/01',
+  role: 'Staff',
+  status: 'Banned',
+  _classes: 'table-success'
+}, {
+  username: 'Quintin Ed',
+  registered: '2012/02/01',
+  role: 'Admin',
+  status: 'Inactive'
+}, {
+  username: 'Enéas Kwadwo',
+  registered: '2012/03/01',
+  role: 'Member',
+  status: 'Pending'
+}, {
+  username: 'Agapetus Tadeáš',
+  registered: '2012/01/21',
+  role: 'Staff',
+  status: 'Active'
+}, {
+  username: 'Carwyn Fachtna',
+  registered: '2012/01/01',
+  role: 'Member',
+  status: 'Active',
+  _classes: 'table-success'
+}, {
+  username: 'Nehemiah Tatius',
+  registered: '2012/02/01',
+  role: 'Staff',
+  status: 'Banned'
+}, {
+  username: 'Ebbe Gemariah',
+  registered: '2012/02/01',
+  role: 'Admin',
+  status: 'Inactive'
+}, {
+  username: 'Eustorgios Amulius',
+  registered: '2012/03/01',
+  role: 'Member',
+  status: 'Pending'
+}, {
+  username: 'Leopold Gáspár',
+  registered: '2012/01/21',
+  role: 'Staff',
+  status: 'Active'
+}, {
+  username: 'Pompeius René',
+  registered: '2012/01/01',
+  role: 'Member',
+  status: 'Active'
+}, {
+  username: 'Paĉjo Jadon',
+  registered: '2012/02/01',
+  role: 'Staff',
+  status: 'Banned'
+}, {
+  username: 'Micheal Mercurius',
+  registered: '2012/02/01',
+  role: 'Admin',
+  status: 'Inactive'
+}, {
+  username: 'Ganesha Dubhghall',
+  registered: '2012/03/01',
+  role: 'Member',
+  status: 'Pending'
+}, {
+  username: 'Hiroto Šimun',
+  registered: '2012/01/21',
+  role: 'Staff',
+  status: 'Active'
+}, {
+  username: 'Vishnu Serghei',
+  registered: '2012/01/01',
+  role: 'Member',
+  status: 'Active'
+}, {
+  username: 'Zbyněk Phoibos',
+  registered: '2012/02/01',
+  role: 'Staff',
+  status: 'Banned'
+}, {
+  username: 'Einar Randall',
+  registered: '2012/02/01',
+  role: 'Admin',
+  status: 'Inactive',
+  _classes: 'table-danger'
+}, {
+  username: 'Félix Troels',
+  registered: '2012/03/21',
+  role: 'Staff',
+  status: 'Active'
+}, {
+  username: 'Aulus Agmundr',
+  registered: '2012/01/01',
+  role: 'Member',
+  status: 'Pending'
+}];
+/* harmony default export */ __webpack_exports__["default"] = (usersData);
 
 /***/ })
 

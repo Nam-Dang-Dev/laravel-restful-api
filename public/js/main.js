@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/Admin/main.js":
-/*!************************************!*\
-  !*** ./resources/js/Admin/main.js ***!
-  \************************************/
+/***/ "./resources/js/main.js":
+/*!******************************!*\
+  !*** ./resources/js/main.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -98,13 +98,13 @@
 /***/ }),
 
 /***/ 1:
-/*!******************************************!*\
-  !*** multi ./resources/js/Admin/main.js ***!
-  \******************************************/
+/*!************************************!*\
+  !*** multi ./resources/js/main.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\laravel-restful-api\resources\js\Admin\main.js */"./resources/js/Admin/main.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\laravel-restful-api\resources\js\main.js */"./resources/js/main.js");
 
 
 /***/ })
